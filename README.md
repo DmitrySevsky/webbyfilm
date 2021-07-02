@@ -1,8 +1,9 @@
 
 Запуск сервера:
-npm install
-npm start
 
+npm install
+
+npm start
 
 Для запуска проекта необходимо войти в консоль, 
 перейти в директорию webbyFilm, командой "npm instal" скачать все библиотеки, 
