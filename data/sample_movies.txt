@@ -1,4 +1,8 @@
-﻿Title: Blazing Saddles
+﻿
+
+
+
+Title: Blazing Saddles
 Release Year: 1974
 Format: VHS
 Stars: Mel Brooks, Clevon Little, Harvey Korman, Gene Wilder, Slim Pickens, Madeline Kahn
@@ -13,10 +17,10 @@ Stars: Humphrey Bogart, Ingrid Bergman, Claude Rains, Peter Lorre
 Title: Charade
 Release Year: 1953
 Format: DVD
-Stars: Audrey Hepburn, Cary Grant, Walter Matthau, James Coburn, George Kennedy
+Stars: Audrey Hepburn, Cary Grant, Cary Grant, Cary Grant, Walter Matthau, James Coburn, George Kennedy
 
 
-Title: Cool Hand Luke
+Title: Cool Hand and Luke
 Release Year: 1967
 Format: VHS
 Stars: Paul Newman, George Kennedy, Strother Martin
@@ -146,3 +150,6 @@ Title: Knocked Up
 Release Year: 2007
 Format: Blu-Ray
 Stars: Seth Rogen, Katherine Heigl, Paul Rudd, Leslie Mann
+
+
+
