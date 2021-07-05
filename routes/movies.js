@@ -45,7 +45,7 @@ router.get('/:id', async (req, res) => {
 // Поиск по указанному в теле запроса названию или актеру
 router.get('/', async (req, res) => {
     const name = req.body.title;
-    const findParam = "\\w[\\h\\w]*" + name + "[\\h\\w]*";
+    const findParam = "[\\h\\w]*" + name + "[\\h\\w]*";
 
     await Film.find({
         $or: [
@@ -98,14 +98,16 @@ router.post('/', async (req, res) => {
 });
 
 // Загрузка файла из input'а
+// !!!Warning!!! В postman при загрузке файла через form-data,
+// ключем должен быть 'fileData'
 router.post('/import', async (req, res, next) => {
-    res.locals.file = req.file.path;
+    if (req.file) res.locals.file = req.file.path;
     next();
 });
 
 // Загрузка файла из body
 router.post('/import', async (req, res, next) => {
-    if (!res.locals.file) {
+    if (!res.locals.file && req.body.fileName) {
         res.locals.file = './data/' + req.body.fileName;
     }
     next();
@@ -132,7 +134,8 @@ router.post('/import', async (req, res) => {
         document.forEach(row => {
             if (row) filmRowValues.push(row.split(': ')[1]);
         });
-
+        if (!filmRowValues[0]) continue;
+        
         filmRowValues[1] = filmRowValues[1].trim();
         filmRowValues[3] = filmRowValues[3].split(', ');
         chk_actors = deleteDuplicates(filmRowValues[3]);
